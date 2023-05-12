@@ -24,11 +24,12 @@ mysql = new Sequelize({
   password: config.db.password,
   port: config.db.port,
   dialect: "mysql",
-  logging: async function(msg) {
+  logging: function(msg) {
     var err;
     try {
-      return (await fsp.appendFile(pathLib.resolve("./database/db_log.sql"), msg));
+
     } catch (error) {
+      //await fsp.appendFile pathLib.resolve("./database/db_log.sql"),msg
       err = error;
       return console.log(err);
     }
