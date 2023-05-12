@@ -1,4 +1,4 @@
-# icat_bbs_mini
+# icat_bbs_mini 喵空间社区程序迷你版
 a cut mini bbs/forum. 一个一点也不可爱的迷你轻论坛/轻社区程序？
 
 ![preview](./preview.jpg)
