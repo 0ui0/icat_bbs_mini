@@ -1,0 +1,65 @@
+do (item,index)->
+  m "",
+    
+    key:index
+    style:
+      display:"none"
+      background:"gray"
+      borderRadius:"3px"
+      #margin:"10px"
+      width:"#{rectSize.width}px"
+      height:"#{rectSize.height}px"
+      position:"absolute"
+      top:"#{item.y}px"
+      left:"#{item.x}px"
+
+
+    onmousedown: (e)->
+      console.log this
+      this.style["box-shadow"] = "1px 1px 10px rgba(0,0,0,0.5)"
+      this.style["z-index"] = "999"
+      event = e||event
+      event.preventDefault()
+      mouse = 
+        x:event.clientX+document.documentElement.scrollLeft||document.body.scrollLeft
+        y:event.clientY+document.documentElement.scrollTop||document.body.scrollTop
+      dis = 
+        x: mouse.x - this.offsetLeft
+        y: mouse.y - this.offsetTop
+
+      document.onmousemove = (e)=>
+
+        event = e||event   
+        mouse = 
+          x:event.clientX+document.documentElement.scrollLeft||document.body.scrollLeft
+          y:event.clientY+document.documentElement.scrollTop||document.body.scrollTop          
+        
+      
+
+        this.style.left = mouse.x - dis.x + "px"
+        this.style.top = mouse.y - dis.y + "px"
+
+        m.redraw()
+
+      document.onmouseup = (e)=>
+        #this.style.left = defaultPos.x + "px"
+        #this.style.top = defaultPos.y + "px"
+        pos = 
+          x: Math.floor(this.offsetLeft / (100 + spaceWidth))+1
+          y: Math.floor(this.offsetTop / (100 + spaceWidth))+1
+
+        
+
+
+        new tools.startMove this,item.x,"left",=>
+          this.style["box-shadow"] = ""
+          this.style["z-index"] = "auto"
+        new tools.startMove this,item.y,"top",=>
+          this.style["box-shadow"] = ""
+          this.style["z-index"] = "auto"
+
+        document.onmousemove = null
+        document.onmouseup = null
+        
+
+  ,index

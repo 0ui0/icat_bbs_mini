@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+attachment/
+*.zip
+*.rar
+*.7z
+Thumbs.db
+www/dist/
+www/node_modules/
+www/data/
+www/public/statics/block/
+upload/

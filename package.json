@@ -1,0 +1,28 @@
+{
+  "name": "hapi",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx webpack ./www/src/main.js --output ./www/bin/main.js -d --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hapi/cookie": "^11.0.1",
+    "@hapi/hapi": "^21.3.2",
+    "@hapi/inert": "^6.0.1",
+    "cropper": "^4.1.0",
+    "cropperjs": "^1.5.7",
+    "fs-extra": "^9.0.1",
+    "jquery": "^3.5.1",
+    "katex": "^0.11.1",
+    "marked": "^0.8.2",
+    "mithril": "^2.0.4",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.22.3",
+    "vditor": "^3.3.11",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
