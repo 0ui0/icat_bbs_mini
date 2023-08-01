@@ -20,3 +20,5 @@ a cut mini bbs/forum. 一个一点也不可爱的迷你轻论坛/轻社区程序
 https://project.o-o.zone
 另外欢迎前往喵宅苑玩耍：
 https://www.o-o.zone
+完整版购买：
+https://www.o-o.space/#!/shop
