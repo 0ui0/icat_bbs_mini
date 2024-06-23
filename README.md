@@ -2,8 +2,7 @@
 a cut mini bbs/forum. 一个一点也不可爱的迷你轻论坛/轻社区程序？
 
 ![preview](./preview.jpg)
-![preview](./喵空间社区程序软件介绍图.jpg)
-![preview](./喵空间推广图.jpg)
+
 # 使用说明
 下载项目后，进入项目目录
 打开命令行：
